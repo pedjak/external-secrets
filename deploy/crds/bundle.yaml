@@ -2926,6 +2926,23 @@ spec:
                         - module
                         - url
                       type: object
+                    upboundspaces:
+                      properties:
+                        storeRef:
+                          description: SecretStoreRef defines which SecretStore to fetch the ExternalSecret data.
+                          properties:
+                            kind:
+                              description: Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`
+                              type: string
+                            name:
+                              description: Name of the SecretStore resource
+                              type: string
+                          required:
+                            - name
+                          type: object
+                      required:
+                        - storeRef
+                      type: object
                     vault:
                       description: Vault configures this store to sync secrets using Hashi provider
                       properties:
@@ -6868,6 +6885,23 @@ spec:
                         - auth
                         - module
                         - url
+                      type: object
+                    upboundspaces:
+                      properties:
+                        storeRef:
+                          description: SecretStoreRef defines which SecretStore to fetch the ExternalSecret data.
+                          properties:
+                            kind:
+                              description: Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`
+                              type: string
+                            name:
+                              description: Name of the SecretStore resource
+                              type: string
+                          required:
+                            - name
+                          type: object
+                      required:
+                        - storeRef
                       type: object
                     vault:
                       description: Vault configures this store to sync secrets using Hashi provider
